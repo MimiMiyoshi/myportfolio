@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   i18n,
-  output: "export",
+
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // クライアントサイドのビルド設定
