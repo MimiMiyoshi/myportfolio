@@ -1,0 +1,45 @@
+{
+  "header": {
+    "grow": "Grow with me",
+    "improve": "Let's improve your processes together"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "ABOUT",
+    "description": "Hi, I'm Mimi, a freelance front-end engineer based in Sapporo, Hokkaido. My background includes a degree in Marketing and studies in Hotel Management in Canada, giving me a unique perspective on user needs and digital experiences. I'm fluent in Japanese, French, and English, with some Korean. While my focus is front-end development, I also have a working knowledge of Java.",
+    "whatIdo": "Front-End Development Skills",
+    "whatIdoList": [
+      "HTML: Proficient in creating semantic and accessible website structures.",
+      "CSS: Skilled in styling web pages for visual appeal and responsiveness across various devices.",
+      "JavaScript: Experienced in developing interactive and dynamic user interfaces and functionalities.",
+      "React: Expertise in building reusable components and scalable web applications."
+    ],
+    "whatIdo2": "Framework and Back-End Skills",
+    "whatIdoList2": [
+      "PHP: Proficient in developing server-side applications and APIs.",
+      "Laravel: Experienced in building robust and scalable web applications.",
+      "Java: Proficient in developing server-side applications and APIs."
+    ]
+  },
+  "contact": {
+    "title": "CONTACT",
+    "subtitle": "Ready to debug your next big idea? Send me a signal!",
+    "form": {
+      "name": "Name",
+      "email": "E-mail",
+      "comment": "Comment"
+    }
+  },
+  "footer": {
+    "rights": "All Rights Reserved"
+  },
+  "works": {
+    "title": "Works",
+    "subtitle": "These are the websites and applications I've created for assignments and other projects."
+  }
+}

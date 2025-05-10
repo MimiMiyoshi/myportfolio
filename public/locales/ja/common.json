@@ -1,0 +1,45 @@
+{
+  "header": {
+    "grow": "Grow with me",
+    "improve": "Let's improve your processes together"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "ABOUT",
+    "description": "札幌を拠点に、フリーランスでフロントエンドエンジニアをしてます。マーケティングで学位を取得し、カナダにてホテルマネジメントを学びました。この経験を活かし、ユーザー視点に立ったデジタル体験の設計を得意としています。現在はフロントエンド開発を中心に取り組んでいますが、Javaによるバックエンド開発にも対応可能です。",
+    "whatIdo": "Front-End Development Skills",
+    "whatIdoList": [
+      "HTML: セマンティックかつアクセシビリティを考慮したWebサイトのマークアップが得意です。",
+      "CSS: 多様なデバイスに対応した、視覚的に魅力あるスタイリングに自信があります。",
+      "JavaScript: インタラクティブで動的なUIや機能の開発に精通しています。",
+      "React: 再利用可能なコンポーネントの構築や、拡張性のあるWebアプリケーション開発に強みがあります。"
+    ],
+    "whatIdo2": "Framework and Back-End Skills",
+    "whatIdoList2": [
+      "PHP: サーバーサイドのアプリケーションやAPIの開発に精通しています。",
+      "Laravel: 堅牢でスケーラブルなWebアプリケーションの構築に豊富な経験があります。",
+      "Java: サーバーサイドのアプリケーションやAPI開発に対応可能です。"
+    ]
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "次のビッグアイデアのデバッグ準備はできていますか？ご連絡をお待ちしています！",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "comment": "コメント"
+    }
+  },
+  "footer": {
+    "rights": "All Rights Reserved"
+  },
+  "works": {
+    "title": "Works",
+    "subtitle": "課題やプロジェクトのために作成したウェブサイトやアプリケーションです。"
+  }
+}

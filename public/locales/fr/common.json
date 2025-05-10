@@ -1,0 +1,45 @@
+{
+  "header": {
+    "grow": "Grandissons ensemble",
+    "improve": "Améliorons vos processus ensemble"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "ABOUT",
+    "description": "Bonjour, je m'appelle Mimi Miyoshi. Je suis développeuse front-end freelance basée à Sapporo, Hokkaido. J'ai une formation en marketing et j'ai également étudié la gestion hôtelière au Canada, ce qui me permet d’avoir une perspective unique sur les besoins des utilisateurs et les expériences numériques. Je parle couramment le japonais, le français et l’anglais, et j’ai quelques notions de coréen.Bien que je me spécialise dans le développement front-end, j’ai aussi de bonnes connaissances en Java.",
+    "whatIdo": "Front-End Development Skills",
+    "whatIdoList": [
+      "HTML: Maîtrise de la création de structures de sites web sémantiques et accessibles.",
+      "CSS: Compétence dans le stylisme des pages web pour un rendu visuel attrayant et une adaptation responsive sur divers appareils.",
+      "JavaScript: Expérience dans le développement d’interfaces utilisateur interactives et dynamiques, ainsi que de fonctionnalités variées.",
+      "React: Expertise dans la création d’applications front-end modernes et modulaires à l’aide de la bibliothèque React."
+    ],
+    "whatIdo2": "Framework and Back-End Skills",
+    "whatIdoList2": [
+      "PHP: Compétent dans le développement d'applications côté serveur et d’API.",
+      "Laravel: Expérimenté dans la création d'applications web robustes et évolutives.",
+      "Java: Compétent dans le développement d'applications côté serveur et d’API."
+    ]
+  },
+  "contact": {
+    "title": "CONTACT",
+    "subtitle": "Prêt à déboguer votre prochaine grande idée ? Envoyez-moi un signal !",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "comment": "Commentaire"
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés"
+  },
+  "works": {
+    "title": "Works",
+    "subtitle": "Voici les sites web et les applications que j’ai créés pour des devoirs et d’autres projets."
+  }
+}
