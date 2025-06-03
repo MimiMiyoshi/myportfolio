@@ -77,20 +77,14 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
-        "service_x4bse5x", // ここにYOUR_SERVICE_IDを入力
-        "template_h7icfba", // ここにYOUR_TEMPLATE_IDを入力
-        {
-          to_email: "amalfitana.campaia@gmail.com",
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.comment,
-        },
-        "915NoTHVtEb41Vt_1" // ここにYOUR_PUBLIC_KEYを入力
-      );
+      await emailjs.send("service_x4bse5x", "template_h7icfba", {
+        name: formData.name, // 送信者の名前
+        email: formData.email, // 送信者のメールアドレス
+        message: formData.comment, // メッセージ内容
+      });
 
       toast({
-        title: "Message sent successfully!",
+        title: t("contact.form.success"),
         status: "success",
         duration: 5000,
         isClosable: true,
@@ -98,7 +92,16 @@ export default function Contact() {
 
       setFormData({ name: "", email: "", comment: "" });
     } catch (error) {
-      // ... error handling ...
+      console.error("Error sending email:", error);
+      toast({
+        title: t("contact.form.error"),
+        description: error.message,
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -222,6 +225,8 @@ export default function Contact() {
                     width="50%"
                     height="50px"
                     fontSize="lg"
+                    isLoading={isSubmitting}
+                    loadingText={t("contact.form.sending")}
                     _hover={{
                       transform: "translateY(-2px)",
                       boxShadow: "lg",

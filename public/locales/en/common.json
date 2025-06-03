@@ -33,7 +33,10 @@
       "name": "Name",
       "email": "E-mail",
       "comment": "Comment",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "success": "Message sent successfully",
+      "error": "Failed to send message",
+      "sending": "Sending..."
     }
   },
   "footer": {
