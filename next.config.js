@@ -24,6 +24,15 @@ const nextConfig = {
   experimental: {
     esmExternals: "loose",
   },
+  // ローカルホストの設定を追加
+  async rewrites() {
+    return [
+      {
+        source: "/:path*",
+        destination: "/:path*",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

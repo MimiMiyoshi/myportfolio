@@ -20,8 +20,6 @@ import { Gloock } from "next/font/google";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
-
-
 const gloock = Gloock({
   weight: "400",
   subsets: ["latin"],
@@ -127,12 +125,12 @@ export default function Contact() {
             <VStack spacing={0} align="stretch">
               <Heading
                 color="pink.400"
-                fontSize={titleFontSize}
+                fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
                 fontFamily="Helvetica, sans-serif"
               >
                 {t("contact.title")}
               </Heading>
-              <Text fontSize="2xl" fontWeight="normal">
+              <Text fontSize={{ base: "md", md: "lg" }} fontWeight="normal">
                 {t("contact.subtitle")}
               </Text>
             </VStack>
@@ -192,19 +190,6 @@ export default function Contact() {
                 </FormControl>
               </VStack>
             </Box>
-
-            {/* ソーシャルメディアアイコン */}
-            <HStack spacing={4} justify="flex-end">
-              <Link href="#" isExternal>
-                <Box as={FaFacebook} size="30px" color="black" />
-              </Link>
-              <Link href="#" isExternal>
-                <Box as={FaTwitter} size="30px" color="black" />
-              </Link>
-              <Link href="#" isExternal>
-                <Box as={FaInstagram} size="30px" color="black" />
-              </Link>
-            </HStack>
           </VStack>
         </Container>
       </Box>
