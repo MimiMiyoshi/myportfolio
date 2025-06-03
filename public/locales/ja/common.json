@@ -32,7 +32,8 @@
     "form": {
       "name": "お名前",
       "email": "メールアドレス",
-      "comment": "コメント"
+      "comment": "コメント",
+      "submit": "送信する"
     }
   },
   "footer": {

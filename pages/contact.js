@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Container,
@@ -12,6 +12,7 @@ import {
   FormControl,
   FormLabel,
   useBreakpointValue,
+  Button,
 } from "@chakra-ui/react";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
@@ -39,6 +40,12 @@ const gradientAnimation = {
 
 export default function Contact() {
   const { t } = useTranslation("common");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    comment: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // 画面サイズに応じてフォントサイズを変更
   const titleFontSize = useBreakpointValue({
@@ -57,6 +64,14 @@ export default function Contact() {
 
   const toast = useToast();
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -69,7 +84,7 @@ export default function Contact() {
           to_email: "amalfitana.campaia@gmail.com",
           from_name: formData.name,
           from_email: formData.email,
-          message: formData.message,
+          message: formData.comment,
         },
         "915NoTHVtEb41Vt_1" // ここにYOUR_PUBLIC_KEYを入力
       );
@@ -81,7 +96,7 @@ export default function Contact() {
         isClosable: true,
       });
 
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", comment: "" });
     } catch (error) {
       // ... error handling ...
     }
@@ -136,13 +151,16 @@ export default function Contact() {
             </VStack>
 
             {/* フォーム */}
-            <Box as="form" spacing={6}>
+            <Box as="form" spacing={6} onSubmit={handleSubmit}>
               <VStack spacing={6} align="stretch">
                 <FormControl>
                   <FormLabel color="gray.700">
                     {t("contact.form.name")}
                   </FormLabel>
                   <Input
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     bg="white"
                     border="2px solid"
                     borderColor="pink.300"
@@ -160,6 +178,9 @@ export default function Contact() {
                     {t("contact.form.email")}
                   </FormLabel>
                   <Input
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     bg="white"
                     border="2px solid"
                     borderColor="pink.300"
@@ -177,6 +198,9 @@ export default function Contact() {
                     {t("contact.form.comment")}
                   </FormLabel>
                   <Textarea
+                    name="comment"
+                    value={formData.comment}
+                    onChange={handleInputChange}
                     bg="white"
                     border="2px solid"
                     borderColor="pink.300"
@@ -188,6 +212,28 @@ export default function Contact() {
                     }}
                   />
                 </FormControl>
+
+                {/* 送信ボタン */}
+                <Box display="flex" justifyContent="center">
+                  <Button
+                    type="submit"
+                    colorScheme="pink"
+                    size="lg"
+                    width="50%"
+                    height="50px"
+                    fontSize="lg"
+                    _hover={{
+                      transform: "translateY(-2px)",
+                      boxShadow: "lg",
+                    }}
+                    _active={{
+                      transform: "translateY(0)",
+                    }}
+                    transition="all 0.2s"
+                  >
+                    {t("contact.form.submit")}
+                  </Button>
+                </Box>
               </VStack>
             </Box>
           </VStack>

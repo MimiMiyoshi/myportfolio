@@ -32,7 +32,8 @@
     "form": {
       "name": "Nom",
       "email": "E-mail",
-      "comment": "Commentaire"
+      "comment": "Commentaire",
+      "submit": "Envoyer un message"
     }
   },
   "footer": {
